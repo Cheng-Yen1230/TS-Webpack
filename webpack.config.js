@@ -6,14 +6,15 @@ const path = require('path');
 module.exports = {
   target: 'web',
   // 入口
-  entry: './src/index.js',
+  entry: './src/app.ts',
   // 模式 development
   mode: 'development',
   // 出口
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'index.[hash].js',
+    filename: 'app.[hash].js',
   },
+  devtool: 'inline-source-map',
   // loader
   module: {
     rules: [
